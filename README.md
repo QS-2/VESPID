@@ -94,10 +94,10 @@ Often useful for when you want to switch out datasets (if using Community Editio
 2. `neo4j-admin dump --database=neo4j --to=/dumps/neo4j/neo4j-<db_nickname>-<datetimestamp>.dump`
     * If the directory `/dumps/neo4j/` doesn't exist yet, switch to ec2-user and run `sudo mkdir /dumps/ && sudo mkdir /dumps/neo4j/ && sudo chown neo4j:neo4j /dumps/neo4j/`
     * Note that 150M nodes and 523M edges results in a compressed dump file of around 61 GB
-3. <jump over to ec2-user>
+3. Jump over to ec2-user
 4. Copy your dump file somewhere helpful, like an S3 bucket
 5. `sudo su - neo4j`
-6. <import/ingest data as needed>
+6. Import/ingest data as needed
 7. `neo4j start && tail -f /var/log/neo4j/neo4j.log`
 
 ## Upgrading the DBMS
